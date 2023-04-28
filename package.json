@@ -1,0 +1,33 @@
+{
+  "name": "tma",
+  "version": "0.0.1",
+  "description": "Task Management Application",
+  "main": "./server/src/index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "server": "nodemon ./server/src/index.js",
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": "https://github.com/GarlandKey/tma.git",
+  "keywords": [
+    "task",
+    "management",
+    "application",
+    "app"
+  ],
+  "author": "Garland Key",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/GarlandKey/tma/issues"
+  },
+  "homepage": "https://github.com/GarlandKey/tma#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
