@@ -1,0 +1,47 @@
+.task {
+	border: 0.1rem solid red;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	min-height: 10rem;
+}
+
+
+.task-col-left {
+	border: 0.1rem solid red;
+	align-items: center;
+	display: flex;
+	padding: 0 3rem;
+	width: 100%;
+}
+
+
+.task-col-right {
+	border: 0.1rem solid red;
+	align-items: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	width: 10rem;
+}
+
+
+.task-title {
+	max-width: 30rem;
+	width: 100vw;
+}
+
+
+.task-description {
+	padding: 1rem;
+	width: 100%;
+}
+
+
+.task-btns {
+	border: 0.1rem solid red;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	width: 100%;
+}

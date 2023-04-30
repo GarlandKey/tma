@@ -1,10 +1,11 @@
+const bodyParser = require('body-parser')
 const Task = require('../models/TasksModel')
 
 module.exports = {
-    getTasks: async (req,res) => {
+    getTasks: async (req, res) => {
         try {
             const tasks = await Task.find()
-            res.send(tasks)
+            res.json(tasks)
         } catch(err) {
             console.error(err)
 			res.status(500).json({ error: err.message })
@@ -12,35 +13,35 @@ module.exports = {
     },
     createTask: async (req, res) => {
         try {
-            const task = new Task(req.body)
-			const newTask = await task.save()
-			res.status(201).json(newTask)
+			console.log(req.body) //todo delete
+            const task = new Task({
+				title: req.body.title,
+				description: req.body.description,
+				status: req.body.status
+			})
+			await task.save()
+			res.json(task)
         } catch(err) {
             console.error(err)
-			res.status(400).json({ error: err.message })
+			res.status(500).json({ error: err.message })
         }
     },
 	updateTask: async (req, res) => {
         try {
-			const task = await Task.findById(req.params.id);
-			if(!task) throw new Error('Task not found')
-			Object.assign(task, req.body)
-			const updatedTask = await task.save()
-			res.json(updatedTask)
+			const task = await Task.findByIdAndUpdate(req.params.id)
+			res.json(task)
         } catch(err) {
             console.error(err)
-			res.status(400).json({ error: err.message })
+			res.status(500).json({ error: err.message })
         }
     },
     deleteTask: async (req, res) => {
         try {
-			const task = await Task.findById(req.params.id)
-			if(!task) throw new Error('Task not found')
-			await task.remove()
+			const task = await Task.findByIdAndDelete(req.params.id)
 			res.json({ message: 'Task deleted successfully' })
         } catch(err) {
             console.error(err)
-			res.status(404).json({ error: err.message })
+			res.status(500).json({ error: err.message })
         }
     }
 }

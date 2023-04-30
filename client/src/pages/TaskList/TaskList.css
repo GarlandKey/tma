@@ -1,0 +1,31 @@
+.container {
+	border: 1px solid red;
+	max-width: 1024px;
+	width: 100vw;
+}
+
+
+header {
+	border: 1px solid red;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	min-height: 100px;
+}
+
+
+.header-col-left {
+	align-items: center;
+	display: flex;
+	padding: 0 30px;
+}
+
+
+.header-col-right {
+	border: 1px solid red;
+	align-items: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	width: 100px;
+}
