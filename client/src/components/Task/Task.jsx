@@ -2,7 +2,7 @@ import './Task.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-export default function Task({ title, description, status }) {
+export default function Task({ key, title, description, status }) {
 
 	const [statusState, setStatusState] = useState('pending')
 
@@ -32,8 +32,8 @@ export default function Task({ title, description, status }) {
 					</select>
 
 					<section className="task-btns">
-						<Link to='edit'><button>✏️</button></Link>
-						<Link to='edit'><button>🗑️</button></Link>
+						<Link to='edit'><button id={key}>✏️</button></Link>
+						<Link to='edit'><button id={key}>🗑️</button></Link>
 					</section>
 				</section>
 			</section>

@@ -28,11 +28,7 @@ export default function AddTask() {
 			.catch( err => {
 				console.log(err)
 			})
-			setTask({
-				"title": "",
-				"description": "",
-				"status": "pending",
-			})
+			
 	}
 	
 
