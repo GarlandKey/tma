@@ -50,21 +50,25 @@ export default function EditTask(id) {
 	return (
 		<>
 			<form id="task" onSubmit={handleSubmit}>
-				<label htmlFor="title">Title</label>
-				<input form="task" id="title" name="title" required={true} onChange={handleChange} value={task.title} />
-				
-				<label htmlFor="description">Description</label>
-				<textarea form="task" id="description" name="description" required={true} onChange={handleChange} value={task.description} />
-
-				<label htmlFor="status">Status</label>
-				<select form="task" id="status" name="status" required={true} onChange={handleChange} value={task.status}>
-					<option value="pending">pending</option>
-					<option value="in progress">in progress</option>
-					<option value="completed">completed</option>
-				</select>
-				<label htmlFor="save">Save</label>
-				<Link to='/'><button type="submit" id="save">💾</button></Link>
-				<Link to='edit'><button id={task.id} onClick={handleDelete}>🗑️</button></Link>
+				<section className="title">
+					<label htmlFor="title">Title</label>
+					<input form="task" id="title" maxLength="80" name="title" required={true} onChange={handleChange} />
+				</section>
+				<textarea form="task" cols="50" id="description" maxLength="250" name="description" required={true} rows="5" onChange={handleChange} />
+				<section className="bottom-row">
+					<div>
+						<label htmlFor="status">Status</label>
+						<select form="task" id="status" name="status" required={true} onChange={handleChange}>
+							<option value="pending">pending</option>
+							<option value="in progress">in progress</option>
+							<option value="completed">completed</option>
+						</select>
+					</div>
+					<div className="button-list">
+						<button id={task.id} onClick={handleDelete}>Delete</button>
+						<button type="submit" id="save">Save</button>
+					</div>
+				</section>
 			</form>
 		</>
 	)

@@ -1,6 +1,6 @@
 /***
  * Initializes database 
- * Author Garland Key <hello@garlandkey.com>
+ * Author: Garland Key <hello@garlandkey.com>
  ***/ 
 
 const mongoose = require('mongoose')

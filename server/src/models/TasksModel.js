@@ -1,3 +1,8 @@
+/***
+ * Schema for task management API
+ * Author: Garland Key <hello@garlandkey.com>
+ ***/
+
 const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise

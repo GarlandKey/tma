@@ -26,5 +26,5 @@ header {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
-	width: 20rem;
+	padding-right: 2.5rem;
 }

@@ -1,3 +1,10 @@
+/***
+ * Task Management Application
+ *   All files and folders are semantically
+ *   structured. 
+ * 
+ * Author: Garland Key <hello@garlandkey.com>
+ ***/
 import './index.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'

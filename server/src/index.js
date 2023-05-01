@@ -1,6 +1,8 @@
 /***
- * This is an MVC server with a CRUD API. Files, 
+ * This is an MVC server with a REST API. Files, 
  * and directories are named semantically.
+ * 
+ * Database and .env stored in ./server/src/config
  *   
  *   CRUD   | DESCRIPTION        | URI
  * 
@@ -11,7 +13,8 @@
  *   DELETE   Delete a task        /tasks/:id
  *  
  * Author: Garland Key <hello@garlandkey.com>
-***/
+ ***/
+
 require('dotenv').config({ path: "./src/config/.env" })
 const express = require('express')
 const mongoose = require('mongoose')
