@@ -1,3 +1,17 @@
+/***
+ * CRUD Controller
+ *   
+ *   CRUD   | DESCRIPTION        | URI
+ * 
+ *   GET      Read all tasks       /tasks
+ *   GET      Read a single task   /tasks
+ *   POST     Create new task      /tasks
+ *   PUT      Update a task        /tasks/:id
+ *   DELETE   Delete a task        /tasks/:id
+ *  
+ * Author: Garland Key <hello@garlandkey.com>
+***/
+
 const bodyParser = require('body-parser')
 const Task = require('../models/TasksModel')
 
@@ -22,7 +36,6 @@ module.exports = {
     },
     createTask: async (req, res) => {
         try {
-			console.log(req.body) //todo delete
             const task = new Task({
 				title: req.body.title,
 				description: req.body.description,

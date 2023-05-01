@@ -1,3 +1,8 @@
+/***
+ * Initializes database 
+ * Author Garland Key <hello@garlandkey.com>
+ ***/ 
+
 const mongoose = require('mongoose')
 const MONGO_URL = process.env.MONGO_URL
 
