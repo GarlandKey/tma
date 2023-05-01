@@ -1,0 +1,25 @@
+form {
+    align-items: center;
+    border: 0.2rem solid white;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+	max-width: 75rem;
+    padding: 2rem;
+	width: 100vw;
+}
+
+
+.bottom-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.title {
+    width: 100%;
+}

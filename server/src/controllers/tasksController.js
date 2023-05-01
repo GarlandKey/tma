@@ -11,6 +11,15 @@ module.exports = {
 			res.status(500).json({ error: err.message })
         }
     },
+    getTask: async (req, res) => {
+        try {
+            const task = await Task.findById(req.params.id)
+            res.json(task)
+        } catch(err) {
+            console.error(err)
+            res.status(500).json({error: err.message})
+        }
+    },
     createTask: async (req, res) => {
         try {
 			console.log(req.body) //todo delete

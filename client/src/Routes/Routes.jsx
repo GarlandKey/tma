@@ -10,13 +10,13 @@ import EditTask from '../pages/EditTask/EditTask'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-	  <Route path='/'>
-	  	<Route index element={<TaskList />} />
-		<Route path='add' element={<AddTask />} />
-		<Route path='edit' element={<EditTask />} />
-	  </Route>
+		<Route path='/'>
+			<Route index element={<TaskList />} />
+			<Route path='add' element={<AddTask />} />
+			<Route path='edit' element={<EditTask />} />
+		</Route>
 	)
-  )
+)
 
 export default function Routes({routes}) {
 	return (

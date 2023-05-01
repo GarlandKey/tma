@@ -1,31 +1,30 @@
 .container {
-	border: 1px solid red;
-	max-width: 1024px;
+	max-width: 105rem;
 	width: 100vw;
 }
 
 
 header {
-	border: 1px solid red;
+	border: 0.2rem solid white;
+	border-radius: 0.8rem 0.8rem 0 0;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	min-height: 100px;
+	min-height: 10rem;
 }
 
 
 .header-col-left {
 	align-items: center;
 	display: flex;
-	padding: 0 30px;
+	padding: 0 3rem;
 }
 
 
 .header-col-right {
-	border: 1px solid red;
 	align-items: center;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
-	width: 100px;
+	width: 20rem;
 }

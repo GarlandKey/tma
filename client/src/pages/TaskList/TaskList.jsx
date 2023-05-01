@@ -28,13 +28,12 @@ export default function TaskList() {
 					</section>
 					
 					<section className="header-col-right">
-						<label htmlFor="add"> Add Task </label>
-						<Link to='add'><button id="add">+</button></Link>
+						<Link to='add'><button id="add">Add Task</button></Link>
 					</section>
 				</header>
 				{
 					tasks.map( task => (
-						<Task key={task.id} title={task.title} description={task.description} status={task.status} />
+						<Task key={task.id} id={task.id} title={task.title} description={task.description} status={task.status} />
 					))
 				}
 			</div>

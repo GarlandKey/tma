@@ -1,13 +1,21 @@
 import './Task.css'
-import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import axios from 'axios'
 
-export default function Task({ key, title, description, status }) {
+const BASE_URL = 'http://127.0.0.1:2121/tasks'
 
-	const [statusState, setStatusState] = useState('pending')
+export default function Task({ id, title, description, status }) {
 
-	const handleChange = () =>{
-		setStatusState({status})
+	const handleDelete = event => {
+		event.preventDefault()
+
+		axios
+			.delete(`${BASE_URL}/${id}`)
+			.then((response) => {
+				console.log(response)
+				console.log(response.data)
+				console.log('sucessfully deleted!')
+			})
 	}
 
 	return (
@@ -24,16 +32,10 @@ export default function Task({ key, title, description, status }) {
 				</section>
 
 				<section className="task-col-right">
-					<label htmlFor="status">Status</label>
-					<select form="task" id="status" name="status" required={true} value={status} onChange={handleChange}>
-						<option value="pending">pending</option>
-						<option value="in progress">in progress</option>
-						<option value="completed">completed</option>
-					</select>
-
+					<small>Status: {status}</small>
+	
 					<section className="task-btns">
-						<Link to='edit'><button id={key}>✏️</button></Link>
-						<Link to='edit'><button id={key}>🗑️</button></Link>
+						<Link to='edit'><button id={id}>Edit</button></Link>
 					</section>
 				</section>
 			</section>
