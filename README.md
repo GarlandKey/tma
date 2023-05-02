@@ -17,7 +17,7 @@ This repository requires the use of [`npm`](https://github.com/npm/cli). You can
 
 ### Things to know
 
-* The to prevent accidentally sharing credentials, `dotenv` is being used. The `.env` file can be found here: `./server/src/config/.env`
+* In order to prevent sharing credentials, `dotenv` is being used. The `.env` file can be found here: `./server/src/config/.env`. `.gitignore` is properly configured to ignore `.env` files.
 
 * The server datebase configuration can be found in `./server/src/config/db.js`
 
