@@ -12,6 +12,11 @@ form {
 }
 
 
+.add-task-top {
+    padding: 1rem 2rem;
+}
+
+
 .bottom-row {
     display: flex;
     flex-flow: row nowrap;

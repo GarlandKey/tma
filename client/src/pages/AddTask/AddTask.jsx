@@ -34,6 +34,7 @@ export default function AddTask() {
 
 	return (
 		<>
+			<h1 className="add-task-top">Add Task</h1>
 			<form id="task" onSubmit={handleSubmit}>
 				<section className="title">
 					<label htmlFor="title">Title</label>
