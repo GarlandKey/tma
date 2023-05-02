@@ -4,18 +4,10 @@ This is a basic task management application.
 ## Built With
 
 **Dependencies**
-* [axios](https://github.com/axios/axios)
-* [cors](https://github.com/expressjs/cors)
-* [dotenv](https://github.com/motdotla/dotenv)
-* [express](https://github.com/expressjs/express)
-* [mongodb](https://github.com/mongodb/mongo)
-* [mongoose](https://github.com/Automattic/mongoose)
-* [node](https://github.com/nodejs/node)
-* [react](https://github.com/facebook/react)
+[axios](https://github.com/axios/axios), [cors](https://github.com/expressjs/cors), [dotenv](https://github.com/motdotla/dotenv), [express](https://github.com/expressjs/express), [mongodb](https://github.com/mongodb/mongo), [mongoose](https://github.com/Automattic/mongoose), [node](https://github.com/nodejs/node), [react](https://github.com/facebook/react)
 
 **Dev Dependencies**
-* [nodemon](https://github.com/remy/nodemon)
-* [vite](https://github.com/vitejs/vite)
+[nodemon](https://github.com/remy/nodemon), [vite](https://github.com/vitejs/vite)
 
 ## Getting Started
 
