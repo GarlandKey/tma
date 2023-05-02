@@ -70,7 +70,7 @@ Runs the server in development mode. [http://localhost:2121](http://localhost:21
 
 2. Start the client
 
-`npm run dev`
+`vite`
 
 ## License
 
