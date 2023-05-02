@@ -58,7 +58,7 @@ This repository requires the use of [`npm`](https://github.com/npm/cli). You can
 
 `npm i`
 
-##  Running the server
+### Running the server
 
 1. Go to src directory
 
@@ -70,7 +70,7 @@ Runs the server in development mode. [http://localhost:2121](http://localhost:21
 
 `npm start server`
 
-## Running the client
+### Running the client
 
 1. Go to client directory
 
