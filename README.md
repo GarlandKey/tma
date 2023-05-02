@@ -68,22 +68,29 @@ This repository requires the use of [`npm`](https://github.com/npm/cli). You can
 
 Runs the server in development mode. [http://localhost:2121](http://localhost:2121). The developer build runs with `nodemon` so it will automatically restart when you make changes.
 
-### `npm start server`
+`npm start server`
 
-## **Running the client** 
+## Running the client
 
 1. Go to client directory
 
-### `./client`
+`./client`
 
 2. Start the client
 
-### `npm run dev`
-
-
-
+`npm run dev`
 
 ## License
 
 This project is licensed under the **GNU General Public License v3**.
 See [LICENSE](LICENSE) for more information.
+
+## Roadmap
+
+The MVP is not complete. The following need to be done to.
+
+1. The `AddTask.jsx` component needs to redirect back to `/` when the `POST` request is successful and provide an error message to the user when something goes wrong.
+
+2. The `EditTask.jsx` component needs tweaking so that the data that is being `PUT` meets the server schema and therefore stops returning a server error.
+
+3. There needs to be a new `DeleteTask.jsx` button component that can be used within the following components: `TaskList.jsx`, `EditTask.jsx`.
