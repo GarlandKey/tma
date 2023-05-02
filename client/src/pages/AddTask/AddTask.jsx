@@ -1,8 +1,11 @@
 import './AddTask.css'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 export default function AddTask() {
+
+	const navigateTo = useNavigate()
 
 	const [task, setTask] = useState({
 		"title": "",
@@ -15,11 +18,10 @@ export default function AddTask() {
 			...task,
 			[event.target.name]: event.target.value,
 		})
+		console.log(task)
 	}
 
-	const handleSubmit = event => {
-		event.preventDefault();
-
+	const postTask = task => {
 		axios
 			.post('http://127.0.0.1:2121/tasks', task)
 			.then( res => {
@@ -27,11 +29,14 @@ export default function AddTask() {
 			})
 			.catch( err => {
 				console.log(err)
-			})
-			
+			})		
+	}
+
+	const handleSubmit = () => {
+		postTask(task)
+		navigateTo('/')
 	}
 	
-
 	return (
 		<>
 			<h1 className="add-task-top">Add Task</h1>
