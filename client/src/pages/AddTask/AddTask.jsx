@@ -1,6 +1,6 @@
 import './AddTask.css'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 export default function AddTask() {
@@ -55,7 +55,10 @@ export default function AddTask() {
 							<option value="completed">completed</option>
 						</select>
 					</div>
-					<button type="submit" id="save">Save</button>
+					<div className="button-list">
+						<Link to='/'><button>Cancel</button></Link>
+						<button type="submit" id="save">Save</button>
+					</div>
 				</section>
 			</form>
 		</>

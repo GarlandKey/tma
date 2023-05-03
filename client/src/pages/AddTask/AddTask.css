@@ -16,6 +16,10 @@ form {
     padding: 1rem 2rem;
 }
 
+.button-list {
+    display: flex;
+    gap: 2rem;
+}
 
 .bottom-row {
     display: flex;
