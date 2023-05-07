@@ -1,7 +1,6 @@
 .task {
-	border-bottom: 0.2rem solid white;
-	border-left: 0.2rem solid white;
-	border-right: 0.2rem solid white;
+	border: 0.1rem solid #343140;
+	border-top-width: 0;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;

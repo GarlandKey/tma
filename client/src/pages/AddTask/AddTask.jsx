@@ -28,7 +28,7 @@ export default function AddTask() {
 				console.log(res.data)
 			})
 			.catch( err => {
-				console.log(err)
+				console.error(err)
 			})		
 	}
 
@@ -40,7 +40,7 @@ export default function AddTask() {
 	return (
 		<>
 			<h1 className="add-task-top">Add Task</h1>
-			<form id="task" onSubmit={handleSubmit}>
+			<form id="task" onSubmit={handleSubmit} className="add-task-form">
 				<section className="title">
 					<label htmlFor="title">Title</label>
 					<input form="task" id="title" maxLength="80" name="title" required={true} onChange={handleChange} />

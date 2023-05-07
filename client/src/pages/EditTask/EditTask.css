@@ -1,6 +1,6 @@
-form {
+.edit-task-form {
     align-items: center;
-    border: 0.2rem solid white;
+    border: 0.1rem solid #343140;
     border-radius: 0.8rem;
     display: flex;
     flex-flow: row wrap;
@@ -9,6 +9,11 @@ form {
 	max-width: 75rem;
     padding: 2rem;
 	width: 100vw;
+}
+
+
+.edit-task-top {
+    padding: 1rem 2rem;
 }
 
 

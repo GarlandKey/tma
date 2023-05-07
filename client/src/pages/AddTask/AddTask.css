@@ -1,6 +1,7 @@
-form {
+.add-task-form {
     align-items: center;
-    border: 0.2rem solid white;
+    background: #16141C;
+    border: 0.1rem solid #343140;
     border-radius: 0.8rem;
     display: flex;
     flex-flow: row wrap;
@@ -16,10 +17,12 @@ form {
     padding: 1rem 2rem;
 }
 
+
 .button-list {
     display: flex;
     gap: 2rem;
 }
+
 
 .bottom-row {
     display: flex;

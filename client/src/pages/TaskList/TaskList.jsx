@@ -17,6 +17,9 @@ export default function TaskList() {
 		.then((res) => {
 			setTasks(res.data)
 		})
+		.catch( err => {
+			console.error(err)
+		})
 	}, [])
 
 	return (
@@ -33,7 +36,7 @@ export default function TaskList() {
 				</header>
 				{
 					tasks.map( task => (
-						<Task key={task.id} id={task.id} title={task.title} description={task.description} status={task.status} />
+						<Task key={task._id} id={task._id} title={task.title} description={task.description} status={task.status} />
 					))
 				}
 			</div>

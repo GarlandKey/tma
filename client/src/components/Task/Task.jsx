@@ -1,23 +1,8 @@
 import './Task.css'
 import { Link } from 'react-router-dom';
-import axios from 'axios'
-
-const BASE_URL = 'http://127.0.0.1:2121/tasks'
 
 export default function Task({ id, title, description, status }) {
-
-	const handleDelete = event => {
-		event.preventDefault()
-
-		axios
-			.delete(`${BASE_URL}/${id}`)
-			.then((response) => {
-				console.log(response)
-				console.log(response.data)
-				console.log('sucessfully deleted!')
-			})
-	}
-
+	
 	return (
 		<>
 			<section className="task">
@@ -27,7 +12,7 @@ export default function Task({ id, title, description, status }) {
 					</section>
 				
 					<section className="task-description">
-						<p>{description}</p>
+						<p>id: {id} | {description}</p>
 					</section>
 				</section>
 
@@ -35,7 +20,7 @@ export default function Task({ id, title, description, status }) {
 					<small>Status: {status}</small>
 	
 					<section className="task-btns">
-						<Link to='edit'><button id={id}>Edit</button></Link>
+						<Link to="edit" state={{ "_id": id, "title": title, "description": description, "status": status }}><button>Edit</button></Link>
 					</section>
 				</section>
 			</section>
